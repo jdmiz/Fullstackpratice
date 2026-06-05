@@ -1,0 +1,71 @@
+.happy-monkey-regular {
+  font-family: "Happy Monkey", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#birthimg {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  border:5px solid #efb0c9;
+}
+body {
+ text-align: center;
+ font-family:"Happy Monkey", cursive;
+ color:antiquewhite;
+ background: linear-gradient( lightblue, lightpink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 ,h2,h3 ,h4{
+ text-shadow: 0px 0px 5px black;
+}
+#age{
+margin: 10px;
+ background: #efb0c9;
+ border-radius: 5px;
+ padding: 5px 10px ;
+}
+#date{  
+ background: #efb0c9;
+ border-radius: 5px;
+ padding: 5px 10px ;
+}
+.hover-img {
+ 
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+  border:5px solid #efb0c9;
+
+  margin: 5px auto;
+
+  background:url(./img/gift-cover.jpg);
+
+  background-size: cover;
+}
+#himg1:hover {
+  background:url("./img/happy.gif");
+  background-size:cover;
+
+}
+#himg2:hover {
+  background:url("./img/happy.gif");
+  background-size:cover;
+
+}
+#himg3 {
+  height: 200px;
+
+}
+#himg3:hover {
+  background:url("./img/happy.gif");
+
+background-size:cover;
+}
+#footer{
+  color:antiquewhite;
+
+}
