@@ -1,3 +1,5 @@
+
+//js code for black jack
 let card= []
 let sum = 0
 let hasBlackJack = false
