@@ -1,4 +1,4 @@
-
+--Connected Discord-GitHub Roblox username: Cripyod and discord: makichuu
 --income/unit script inside serverscript
 
 local folder = workspace:WaitForChild("Game"):WaitForChild("Buttons")
