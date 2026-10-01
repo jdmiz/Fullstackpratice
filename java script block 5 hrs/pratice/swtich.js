@@ -3,7 +3,7 @@ function item(item){
     switch(item){
         case 'apple':
             price = 20
-            msg
+            
         break;
         case 'banana':
             price = 10
