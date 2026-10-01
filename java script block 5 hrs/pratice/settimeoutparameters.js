@@ -5,4 +5,5 @@ function mycountry(answer,money){
    const answerofit =setTimeout(mycountry,2000,'Nepal',1000)
     document.getIdByElement('stop').addEventListner(click,function(){
         clearTimeout(answerofit)
+        console.log('you have stopped the timeout')
     })
