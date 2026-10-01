@@ -2,7 +2,7 @@
 function mycountry(answer,money){
     console.log(`I am from ${answer} and I got $${money}`)
 }
-    setTimeout(mycountry,2000,'Nepal',1000)
+   const answerofit =setTimeout(mycountry,2000,'Nepal',1000)
     document.getIdByElement('stop').addEventListner(click,function(){
-        clearTimeout()
+        clearTimeout(answerofit)
     })
