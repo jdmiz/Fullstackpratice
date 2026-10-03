@@ -3,7 +3,7 @@ function check(username){
         console.log(`User is ${username}`)
     }
     else {
-          console.log(new Error("Username is empty"))
+          throw Error("Username is empty")
     }
     
 }
