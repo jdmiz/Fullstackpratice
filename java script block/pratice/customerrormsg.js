@@ -7,3 +7,4 @@ function check(username){
     }
     
 }
+check("Devil")
