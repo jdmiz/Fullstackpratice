@@ -1,2 +1,3 @@
 const time = new Date();
-console.log(time);
+const year = time.getFullYear();
+console.log(time.toString());
