@@ -3,7 +3,10 @@ function check(username){
         console.log(`User is ${username}`)
     }
     else {
-          throw Error("Username is empty")
+        console.log("This will be printed")
+          throw new Error("Username is empty")
+          // throw ends the thing after it
+          console.log("This will not be printed")
     }
     
 }
