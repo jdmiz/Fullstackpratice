@@ -1,44 +1,25 @@
 import {fakeStockAPI} from './fakestockapi.js'
-let previousPrice = null;
-const stockDisplay = document.getElementById('stock-display');
-
-function updateStock() {
- const stockdata = {
-  ...fakeStockAPI,
-  price: (Math.random() * 3).toFixed(2),
-  time: new Date().toLocaleTimeString(),
- };
+setInterval(function(){
+ stockdata = fakeStockAPI;
  renderStock(stockdata);
-}
 
-updateStock();
-setInterval(updateStock, 3000);
+},3000
 
+)
+    let prevdata = null;
 function renderStock(stockdata){
+
 const stockName = document.getElementById('stock-name');
 const stockSymbol = document.getElementById('stock-symbol');
-const stockPrice = document.getElementById('stock-price');
+const stockPrice = document.getElementById('stock-price')
+const stockDisplay = document.getElementById('stock-display');
 const stockTime = document.getElementById('stock-time');
 const {name, symbol, price, time} = stockdata;
-stockName.textContent = name;
-stockSymbol.textContent = symbol;
-stockPrice.textContent = price;
-stockTime.textContent = time;
-
-const numericPrice = Number(price);
-const output = previousPrice === null
-    ? './arrow-neutral-grey.svg'
-    : numericPrice > previousPrice
-        ? './arrow-up-green.svg'
-        : numericPrice < previousPrice
-            ? './arrow-down-red.svg'
-            : './arrow-neutral-grey.svg';
-previousPrice = numericPrice;
-
-stockDisplay.querySelector('.price-change')?.remove();
-const arrow = document.createElement('img');
-arrow.className = 'price-change';
-arrow.src = output;
-arrow.alt = 'Price change';
-stockDisplay.appendChild(arrow);
+stockName.innerHTML = name;
+stockSymbol.innerHTML = symbol;
+stockPrice.innerHTML = price;
+stockTime.innerHTML = time();
+const output = prevdata < price ? './arrow-up-green.png' : prevdata > price ? './arrow-down-red.png' : './arrow-neutral.png';
+prevdata = stockdata.price;
+stockDisplay.innerHTML += `<img src="${output}" alt="Price Change">`;
 }
