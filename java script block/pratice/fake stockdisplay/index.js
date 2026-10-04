@@ -7,16 +7,17 @@ setInterval(function(){
 
 )
 function renderStock(stockdata){
-    prevdata = 0,
+    let prevdata = 0;
 const stockName = document.getElementById('stock-name');
 const stockSymbol = document.getElementById('stock-symbol');
 const stockPrice = document.getElementById('stock-price');
 const stockTime = document.getElementById('stock-time');
-stockName.innerHTML = stockdata.name;
-stockSymbol.innerHTML = stockdata.symbol;
-stockPrice.innerHTML = stockdata.price;
-stockTime.innerHTML = stockdata.time();
-const output = prevdata < stockdata.price ? './arrow-up-green.png' :prevdata>stockdata.price ?'./arrow-down-red.png' : './arrow-neutral.png';
+const {name, symbol, price, time} = stockdata;
+stockName.innerHTML = name;
+stockSymbol.innerHTML = symbol;
+stockPrice.innerHTML = price;
+stockTime.innerHTML = time();
+const output = prevdata < price ? './arrow-up-green.png' : prevdata > price ? './arrow-down-red.png' : './arrow-neutral.png';
 prevdata = stockdata.price;
 stockDisplay.innerHTML += `<img src="${output}" alt="Price Change">`;
 }
