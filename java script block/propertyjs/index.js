@@ -1,3 +1,7 @@
+import {placeholderPropertyObj as holder} from './placeholder.js'
+import {propertyForSaleArr as sale} from '.propertsale.js/'
+
+
 function getPropertyHtml() {
 /*
 SUPER CHALLENGE 💪
@@ -7,6 +11,7 @@ Render out a card for each of the properties in the propertyForSaleArr array (in
 If no array of properties is passed to getPropertyHtml, the placeholder property stored in placeholderPropertyObj (in the 'properties' folder) should be rendered instead.
 
 This is the JS I want you to use to complete this challenge 👇
+
 - import/export
 - .map()
 - .join()
@@ -27,6 +32,7 @@ This is the HTML template 👇. Replace everything in UPPERCASE with property da
     </div>
 </section> 
 */
+
 }
 
 /***** Modify 👇 by adding an argument to the function call ONLY. *****/
