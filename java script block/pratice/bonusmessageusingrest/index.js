@@ -1,12 +1,12 @@
 function sendmessage(text,sender,...names){
-    return names.map(staff=> {`<div>
-    <h1>Hey ${names.name}</h1>
+    return names.map(staff=> `<div>
+    <h1>Hey ${staff.name}</h1>
     
     <p>${text} </p>
     <p> "from goat ${sender}"</p>
     </div>
     
-    `})
+    `).join()
 
 }
 
