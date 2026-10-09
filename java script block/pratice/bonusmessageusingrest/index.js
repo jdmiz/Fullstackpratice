@@ -6,8 +6,7 @@ function sendmessage(text,sender,...names){
     <p> "from goat ${sender}"</p>
     </div>
     
-    `).join()
-
+    `).join(" ")
 }
 
 const text = 'Thank you for all your hard work throughout the year! A'
