@@ -1,8 +1,8 @@
 import {placeholderPropertyObj as holder} from './placeholder.js'
-import {propertyForSaleArr as sale} from './propertsale.js/'
+import {propertyForSaleArr as sale} from './propertsale.js'
 
 
-function getPropertyHtml( a= [sale]) {
+function getPropertyHtml( a = [holder]) {
 /*
 SUPER CHALLENGE 💪
 
@@ -26,17 +26,20 @@ This is the JS I want you to use to complete this challenge 👇
 The HTML and CSS have been done for you. 
 This is the HTML template 👇. Replace everything in UPPERCASE with property data.
 */
-return  a.map(print=> 
-`<section class="card">
-    <img src="/images/${print.image}">
+//i wont use destruct here tho.
+return  a.map(print=> {
+    const totalsz= print.roomsM2.reduce((total,current)=> total+current,0)
+return `<section class="card">
+
+    <img src="./images/${print.image}">
     <div class="card-right">
-        <h2>PROPERTY LOCATION ${print.propertyLocation}</h2>
-        <h3>PRICE GBP ${print.priceGBP}</h3>
-        <p>COMMENT ${print.comment}</p>
-        <h3>TOTAL SIZE IN SQUARE METRES m&sup2;</h3>
+        <h2>PROPERTY LOCATION : ${print.propertyLocation}</h2>
+        <h3>PRICE GBP: ${print.priceGBP}</h3>
+        <p>COMMENT: ${print.comment}</p>
+        <h3>TOTAL SIZE IN SQUARE METRES ${totalsz}m&sup2;</h3>
     </div>
 </section>`
-).join(" ")
+}).join(" ")
 
 }
 
